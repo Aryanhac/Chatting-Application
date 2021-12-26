@@ -5,9 +5,7 @@ const user={};
 
 io.on('connection', socket=>{                // it is for connect everyone
     socket.on('new-user',name=>{             // it is for give the update to the other users about message and joining
-        console.log("user name: " +name);
         user[socket.id]=name;
-        console.log(socket.id);
         socket.broadcast.emit('new-user-joined',name);
     });
     

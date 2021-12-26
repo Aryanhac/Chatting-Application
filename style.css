@@ -20,6 +20,11 @@ body{
     height: 90px;
 }
 
+#heading{
+    text-align: center;
+    margin: 2px;
+}
+
 .container{
     height: 79.2vh;
     display: flex;
@@ -49,12 +54,23 @@ body{
     padding: 5px;
     clear:both;
     max-width: 48%;
+    word-wrap: break-word;
 }
 
 .container .box .leftbox{
     margin: 5px;
     float: left;
     border: 3px solid #4a4646;
+    border-radius: 10px;
+    padding: 5px;
+    clear:both;
+    max-width: 48%;
+}
+.container .box .middlebox{
+    margin: 5px;
+    float:right;
+    border: 3px solid #ebe1e1;
+    color:#ebe1e1;
     border-radius: 10px;
     padding: 5px;
     clear:both;
@@ -85,3 +101,18 @@ body{
     border-radius: 4px;
 }
 
+@media(max-width:750px) {
+    .container .box{
+        width:95%;
+    }
+    #typingbox{
+        width:100%;
+    }
+    #typingbox #send-container input[type="text"]{
+        width:70%;
+    }
+    #typingbox #send-container button{
+        width:40px;
+    }
+    
+}
